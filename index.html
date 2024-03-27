@@ -18,6 +18,12 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-video">
+            <video autoplay muted loop plays-inline id="video-background">
+                <source src="harden.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
         <div class="header-text">
             <p>Web Programming & Design Student At Purdue Unviersity</p>
             <h1><span>Grant Hubbard</span>,<br>Junior</h1>
@@ -46,18 +52,18 @@
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>2021-Present</span><br>Numerous class projects shown in portfolio</li>
                             <li><span>2024</span><br>Using WordPress to design a quality website for a student organization.</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>2021-Present</span><br>B.S. From Purdue University</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                             <li><span>Web Development</span><br>Creating Quality webpages</li>
@@ -68,5 +74,20 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+    }
+
+</script>
 </body>
 </html>

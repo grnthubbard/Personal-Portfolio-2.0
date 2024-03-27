@@ -20,7 +20,7 @@ body {
 
 .container {
     padding: 10px 10%;
-
+    overflow: hidden;
 }
 
 .logo {
@@ -41,7 +41,7 @@ nav ul li {
     margin: 10px 30px;
 }
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -66,6 +66,8 @@ nav ul li a:hover::after {
     margin-top: 20%;
     font-size: 20px;
     margin-left: 50px;
+    color: white;
+    text-shadow: 2px 2px black;
 }
 .header-text h1{
     font-size: 60px;
@@ -74,7 +76,14 @@ nav ul li a:hover::after {
 .header-text span {
     color: ff004f;
 }
-
+#video-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
 /* -------------------about ---------------*/
 
 #about {
@@ -95,7 +104,7 @@ nav ul li a:hover::after {
 }
 .about-col-2 {
     flex-basis: 60%;
-
+    color: #b7aca0;
 }
 .sub-title {
     font-size: 60px;
